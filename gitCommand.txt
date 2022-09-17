@@ -1,0 +1,7 @@
+Git command
+
+Push先レポジトリのURL・ステータスの確認
+git remote -v
+
+Push先レポジトリURLの変更
+git remote set-url origin ＜Github URL＞
