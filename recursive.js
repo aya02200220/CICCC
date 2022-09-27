@@ -1,4 +1,4 @@
-// If 構文
+// If 構文 ------------------------------------
 function pow2(number, power) {
   let temp = 1;
   for (let x = 0; x < power; x++) {
@@ -8,7 +8,7 @@ function pow2(number, power) {
 }
 console.log(pow2(2, 3));
 
-// Recursive 構文
+// Recursive 構文 ------------------------------
 function pow(number, power) {
   if (power == 1) {
     return number;
