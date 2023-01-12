@@ -101,7 +101,7 @@ should return false.
 
 ```js
 function unequal(a, b, c) {
-  //return a !== b && ...
+  return a !== b && b !== c && a !== c;
 }
 ```
 
