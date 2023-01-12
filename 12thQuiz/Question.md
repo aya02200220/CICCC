@@ -138,3 +138,15 @@ For an empty string or cancelled input, show “Canceled”
 Refer to the schema below:
 
 ![flow-chart](./flow-chart.png)
+
+```js
+const login = prompt("Enter your ID:");
+if (login === "") {
+  alert("Canceled");
+} else if (login === "Admin") {
+  const pw = prompt("Enter password:");
+  alert(pw === "TheMaster" ? "Welcome!" : "Wrong password");
+} else {
+  alert("I don't know you");
+}
+```
