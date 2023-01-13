@@ -14,8 +14,8 @@ greeting();
 // C: ReferenceError and 21
 // D: undefined and ReferenceError
 
-// Ans:
-// Short explanation:
+// Ans: D: undefined and ReferenceError
+// Short explanation: var can ce hoisting but its called before declaration. cant call let before declaration.
 ```
 
 ###### Question 2: What's the output?
@@ -28,8 +28,8 @@ greeting();
 // B: false and NaN
 // C: false and false
 
-// Ans:
-// Short explanation:
+// Ans:A: 1 and false
+// Short explanation: "+" makes true as a number. "!"Lydia"" doesn't make sense at all so false.
 ```
 
 ###### Question 3: What's the output?
@@ -46,8 +46,8 @@ sum(1, "2");
 // C: "12"
 // D: 3
 
-// Ans:
-// Short explanation:
+// Ans:C: "12"
+// Short explanation: 2 is string. it becomes same as "1" + "2".
 ```
 
 ###### Question 4: What's the output?
@@ -63,8 +63,8 @@ console.log(number);
 // C: 0 2 2
 // D: 0 1 2
 
-// Ans:
-// Short explanation:
+// Ans:C: 0 2 2
+// Short explanation: With '++' increment, the result will be showed after the next line .
 ```
 
 ###### Question 5: What's the output?
@@ -79,8 +79,8 @@ console.log(number);
 // C: false true true
 // D: true true false
 
-// Ans:
-// Short explanation:
+// Ans:B: false false true
+// Short explanation: !! is same as true condition.
 ```
 
 ###### Question 6: What's the output?
@@ -93,8 +93,8 @@ console.log(3 + 4 + "5");
 // C: 12
 // D: "12"
 
-// Ans:
-// Short explanation:
+// Ans: B: "75"
+// Short explanation: its calculate left to right. when a value is string, it becomes string concatenation after the point.
 ```
 
 ###### Question 7: What's the value of num?
@@ -107,8 +107,8 @@ const num = parseInt("7*6", 10);
 // C: 7
 // D: NaN
 
-// Ans:
-// Short explanation:
+// Ans:C: 7
+// Short explanation:perseInt takes only first numbers.
 ```
 
 ###### Question 8:
@@ -123,12 +123,9 @@ indexOfIgnoreCase('bit','IT') should return 1.
 
 ```js
 //Hint
-function indexOfIgnoreCase(s1, s2) {
-  // Change s1 and s2
-  // first to lowercase.
-  // Then use the
-  // indexOf method.
-}
+const indexOfIgnoreCase = function (str1, str2) {
+  console.log(str1.toUpperCase().indexOf(str2.toUpperCase()));
+};
 ```
 
 ###### Question 9:
@@ -142,9 +139,7 @@ Example: firstChar(' Rosa Parks ') should return 'R'.
 ```js
 //Hint:
 function firstChar(text) {
-  // Trim first.
-  // Then use the
-  // charAt method.
+  return text.trim().charAt(0);
 }
 ```
 
@@ -155,3 +150,9 @@ with '/' in a date string.
 
 Example: normalize('20-05-2017') should return
 '20/05/2017'.
+
+```js
+const normalize = (date) => {
+  return date.replaceAll("-", "/");
+};
+```
