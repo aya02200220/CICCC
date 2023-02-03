@@ -2,16 +2,16 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: #f7f7f7 url(/a-random-joke-website/corona-is-no-joke.webp) center
-    top/cover no-repeat;
+  background: #f7f7f7 url(/a-random-joke-website/corona-is-no-joke.webp) center top/cover no-repeat;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 80%;
   height: 70vh;
-  background-color: #f7f7f7a4;
+  background-color: rgba(247, 247, 247, 0.6431372549);
   align-items: center;
 }
 
@@ -27,8 +27,7 @@ button {
   align-items: center;
   border-radius: 6px;
   cursor: pointer;
-
-  &:hover {
-    background-color: rgb(3, 3, 184);
-  }
 }
+button:hover {
+  background-color: rgb(3, 3, 184);
+}/*# sourceMappingURL=style.css.map */
