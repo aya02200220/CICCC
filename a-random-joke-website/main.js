@@ -1,16 +1,20 @@
-const setup = document.querySelector(".setup");
-const punchline = document.querySelector(".punchline");
-const btn = document.querySelector(".btn");
+const jokeSetup = document.querySelector(".setup");
+const jokePunchline = document.querySelector(".punchline");
+const newJokeButton = document.getElementById("btn");
 
-btn.addEventListener("click", generateJokes);
+// const newJokeButton = document.getElementById("new-joke-button");
 
-async function generateJokes() {
-  const res = await fetch("https://official-joke-api.appspot.com/random_joke");
+const url = "https://official-joke-api.appspot.com/random_joke";
 
-  const data = await res.json();
-  console.log(data.punchline);
-  console.log(data.setup);
+window.addEventListener("load", () => {
+  getJoke();
+  newJokeButton.addEventListener("click", getJoke);
+});
 
-  setup.innerText = data.setup;
-  punchline.innerText = data.punchline;
-}
+const getJoke = () => {
+  axios.get(url).then((response) => {
+    console.log(response);
+    jokeSetup.innerHTML = response.data.setup;
+    jokePunchline.innerHTML = response.data.punchline;
+  });
+};
